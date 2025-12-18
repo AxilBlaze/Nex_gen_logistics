@@ -1,0 +1,1 @@
+{"features": ["Order_Value_INR", "Distance_KM", "Weather_Score", "Priority_Score", "Traffic_Delay_Minutes", "Total_Ops_Cost"], "weather_map": {"Low": 0, "Medium": 1, "High": 2}, "priority_map": {"Economy": 0, "Standard": 1, "Express": 2}}
