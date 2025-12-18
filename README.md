@@ -52,8 +52,17 @@ NexGen Logistics is a comprehensive predictive analytics platform designed to mi
 *   Python 3.9+
 *   Google Gemini API Key
 
-### Step 1: Clone & Install
+### Step 1: Clone & Setup Environment
 ```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# Windows:
+.\venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
 # Install dependencies
 pip install -r requirements.txt
 ```
