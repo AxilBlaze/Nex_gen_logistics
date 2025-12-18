@@ -221,6 +221,12 @@ with tab1:
             predictions = model.predict(master_df[feature_cols])
             master_df["Predicted_Delay_Risk"] = predictions
             
+            # --- Heuristic Risk Layer (Safety Net) ---
+            # Rule 1: Extreme Traffic (> 100 mins) -> Force High Risk
+            master_df.loc[master_df['Traffic_Delay_Minutes'] > 100, 'Predicted_Delay_Risk'] = 0.99
+            # Rule 2: Severe Weather (Score 2) -> Force High Risk
+            master_df.loc[master_df['Weather_Score'] >= 2, 'Predicted_Delay_Risk'] = 0.95
+            
             # Top KPIs
             kpi1, kpi2, kpi3, kpi4 = st.columns(4)
             kpi1.metric("Total Orders", len(master_df))
@@ -410,6 +416,15 @@ with tab2:
                 
                 sim_df = pd.DataFrame([base_features])
                 st.session_state.sim_prob = model.predict(sim_df)[0]
+                
+                # --- Heuristic Risk Layer ---
+                # Override if conditions are extreme
+                if sim_traffic > 100:
+                    st.session_state.sim_prob = max(float(st.session_state.sim_prob), 0.99)
+                    st.toast("⚠️ Heuristic Rule applied: Extreme Traffic Detected")
+                if base_features["Weather_Score"] >= 2:
+                    st.session_state.sim_prob = max(float(st.session_state.sim_prob), 0.95)
+                    st.toast("⚠️ Heuristic Rule applied: Severe Weather Detected")
                 st.session_state.sim_weather = sim_weather
                 st.session_state.sim_traffic = sim_traffic
                 
