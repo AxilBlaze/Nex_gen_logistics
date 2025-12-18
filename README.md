@@ -4,7 +4,7 @@
 
 NexGen Logistics is a comprehensive predictive analytics platform designed to minimize delivery risks, optimize costs, and automate managerial decisions using **Google Gemini AI**.
 
-![App Screenshot](assets/logo.png) *(Assuming logo exists, or you can add a screenshot here)*
+![App Screenshot](workflow.png) *(Assuming logo exists, or you can add a screenshot here)*
 
 ---
 
