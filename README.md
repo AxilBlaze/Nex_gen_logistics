@@ -40,7 +40,7 @@ NexGen Logistics is a comprehensive predictive analytics platform designed to mi
 ## 🛠️ Technology Stack
 *   **Frontend**: Streamlit (Python)
 *   **AI Model**: Google Gemini 2.5 Flash (`google-genai` SDK)
-*   **Machine Learning**: Scikit-Learn (Logistic Regression via `joblib`)
+*   **Machine Learning**: Scikit-Learn (Rando Forest Regressor, Elastic Net via `joblib`)
 *   **Visualization**: Plotly Express & PyDeck (3D Maps)
 *   **Reporting**: FPDF (PDF Generation)
 
