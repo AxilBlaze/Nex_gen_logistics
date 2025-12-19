@@ -74,7 +74,7 @@ streamlit run app.py
 
 ### Step 3: Configure
 1.  Enter your **Gemini API Key** in the sidebar.
-2.  The app will auto-load data from the `NexGen_Logistics/` folder.
+2.  The app will auto-load data from the `NexGen_Logistics/` folder or you can upload the datasets manually.
 3.  Navigate through the 4 tabs to explore!
 
 ---
@@ -88,4 +88,4 @@ streamlit run app.py
 
 ---
 
-> *Built for the NexGen Logistics Innovation Challenge by [Your Name/Role]*
+> *Built for the NexGen Logistics Innovation Challenge by Sandeep Balabantaray*
