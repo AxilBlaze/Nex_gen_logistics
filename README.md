@@ -81,6 +81,7 @@ streamlit run app.py
 
 ## 📂 Project Structure
 *   `app.py`: Main application logic (Frontend + Backend).
+*   `Model_Training.ipynb`: **For Reviewers Only** - I have added this file to demonstrate the model training process.
 *   `nexgen_delay_model.pkl`: Pre-trained risk prediction model.
 *   `NexGen_Logistics/`: Folder containing the 7 sample CSV datasets.
 *   `assets/`: Logos and static images.
